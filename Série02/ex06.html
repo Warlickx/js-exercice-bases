@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ex06</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+
+    <button  id="affiche" name ="affiche" onclick="affiche()">Afficher</button>
+
+    <script>
+        let tab=[-2, 1, 4];
+
+        function soustrait(x) {
+            if (x-2>=0){
+                return x-2;
+            }
+            else if (x-2<0){
+                return "Nombre Négatif !";
+            }
+        }
+
+        function affiche() {
+            alert(soustrait(tab[0]));
+            alert(soustrait(tab[tab.length -1]));
+        }
+    </script>
+</body>
+</html>

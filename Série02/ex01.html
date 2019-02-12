@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ex01</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+    <button  id="surface" name ="surface" onclick="surfaceRectangle()">Calculer la surface d'un rectangle</button>
+    <button  id="perimetre" name ="perimetre" onclick="periRectangle()">Calculer le périmètre d'un rectangle</button>
+
+    <script>
+        function surfaceRectangle() {
+            var longueur=prompt("Veuillez saisir une longueur");
+            var largeur=prompt("Veuillez saisir une largeur");
+            alert(longueur*largeur);
+        }
+
+        function periRectangle() {
+            var longueur=prompt("Veuillez saisir une longueur");
+            var largeur=prompt("Veuillez saisir une largeur");
+            alert((+longueur+ +largeur)*2);
+        }
+    </script>
+</body>
+</html>
