@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ex13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+    <button id=imc name=imc onclick="calculIMC()">Calcul de l'IMC</button>
+
+<script>
+    function calculIMC(){
+        do{
+            poids = prompt("Votre poids en kg");
+        }while(poids != Number(poids)||(poids < 1)||(poids > 400));
+        do{
+            taille = prompt("Votre taille en mètre");
+        }while(taille != Number(taille)||(taille < 1)||(taille > 3));
+        imc = poids / (taille ** 2);
+        if (imc < 16.5){
+            return window.alert("Votre imc est : "+imc.toFixed(2)+"\nDénutritionou famine");
+        } else if ((imc >= 16.5)&&(imc <= 18.5)){
+            return window.alert("Votre imc est de : "+imc.toFixed(2)+"\nMaigreur");
+        } else if ((imc >= 18.5)&&(imc <= 25)){
+            return window.alert("Votre imc est de : "+imc.toFixed(2)+"\nCorpulence normale");
+        } else if ((imc >= 25)&&(imc <= 30)){
+            return window.alert("Votre imc est de : "+imc.toFixed(2)+"\nSurpoids");
+        } else if ((imc >= 30)&&(imc <= 35)){
+            return window.alert("Votre imc est de : "+imc.toFixed(2)+"\nObésité modérée");
+        } else if ((imc >= 35)&&(imc <= 40)){
+            return window.alert("Votre imc est de : "+imc.toFixed(2)+"\nObésité sévère");
+        } else {
+            return window.alert("Votre imc est de : "+imc.toFixed(2)+"\nObésité morbide");
+        }
+    }
+</script>
+</body>
+</html>
