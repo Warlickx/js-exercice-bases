@@ -11,7 +11,28 @@
     <button  id="calcul" name ="calcul" onclick="calculMoyenne()">Calcul de la moyenne</button>
     
     <script>
-                
+        let somme = 0;
+        let moyenne = 0;
+        let divid = 0;
+        let nb = 0;
+
+        function calculMoyenne(){
+            while (nb >= 0) {
+                do {
+                    nb = Number(prompt("Veuillez entrer un nombre entier"));
+                }
+                while (nb != parseInt(nb));
+                if (nb < 0) {
+                    break;
+                } 
+                somme += nb;
+                divid++;
+                }
+            moyenne = somme / divid;
+            return window.alert(
+            "Nombre de valeur: " + divid + "\nMoyenne : " + moyenne
+            );    
+        }
     </script>
 </body>
 </html>
