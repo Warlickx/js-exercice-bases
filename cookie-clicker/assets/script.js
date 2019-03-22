@@ -12,6 +12,7 @@ function cookieClick(){
     if (score>=0){
     score = score +1 * multiplier;
     document.getElementById("cookies").innerHTML='Score : '+score;
+    document.getElementById("title").innerHTML=score+' Cookies';
 }
 }
 
@@ -23,6 +24,7 @@ function augmenterMultiplicateur(){
         prixmultiplier = Math.floor(prixmultiplier * quotient);
         document.getElementById("cookies").innerHTML='Score : '+score;
         document.getElementById("multiplier").innerHTML='Multiplicateur x'+(multiplier+1)+' : '+prixmultiplier+' Cookies';
+        document.getElementById("title").innerHTML=score+' Cookies';
     }
 }
 
@@ -35,6 +37,7 @@ function autoClick(){
         setInterval(cookieClick, 1000);
         document.getElementById("cookies").innerHTML='Score : '+score;
         document.getElementById("auto").innerHTML='Autoclick : '+prixauto+' Cookies';
+        document.getElementById("title").innerHTML=score+' Cookies';
     }
 }
 
@@ -44,6 +47,7 @@ function bonus(){
         score -= prixbonus;
         score = (score +1 * multiplier)*3;
         document.getElementById("cookies").innerHTML='Score : '+score;
+        document.getElementById("title").innerHTML=score+' Cookies';
     }
     clearTimeout(3000);
 }
