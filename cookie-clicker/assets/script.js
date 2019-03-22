@@ -1,5 +1,5 @@
 //Variables numériques
-let score = 5000;
+let score = 0;
 let multiplier = 1;
 let prixmultiplier = 50;
 let prixauto = 500;
